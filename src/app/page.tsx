@@ -37,7 +37,10 @@ export default function Home() {
             Systems{" "}
             <span className="text-gradient-animated">That Work</span>
           </h1>
-          <p className="animate-fade-up delay-3 mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed text-muted-foreground">
+          <p className="animate-fade-up delay-2 text-lg sm:text-xl text-muted-foreground/50 tracking-wide">
+            构建真正能用的智能系统
+          </p>
+          <p className="animate-fade-up delay-3 mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
             <span className="text-foreground/80 font-medium">北京镜界纪元科技有限公司</span>
             <span className="mx-2 text-primary/30">|</span>
             We design and build AI Agents, automation pipelines, and intelligent workflows for businesses ready to operate at the speed of AI.
@@ -141,9 +144,10 @@ export default function Home() {
               <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
                 About Us
               </p>
-              <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
+              <h2 className="mb-2 text-3xl font-bold tracking-tight sm:text-4xl">
                 AI Builders, <span className="text-accent-gradient">Not Just Consultants</span>
               </h2>
+              <p className="mb-6 text-sm text-muted-foreground/50">做 AI 的人，不只是谈 AI 的人</p>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Mirrorsverse is an AI-native technology company founded by engineers who build with AI every day — not just talk about it.
@@ -212,9 +216,10 @@ export default function Home() {
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
             Contact
           </p>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mb-2 text-3xl font-bold tracking-tight sm:text-4xl">
             Let&apos;s Build <span className="text-accent-gradient">Something</span>
           </h2>
+          <p className="mb-6 text-sm text-muted-foreground/50">聊聊你的 AI 项目</p>
           <p className="mb-10 text-muted-foreground leading-relaxed">
             Have an AI project in mind? Whether it&apos;s a quick prototype or a full production system, we&apos;d love to hear about it.
           </p>
