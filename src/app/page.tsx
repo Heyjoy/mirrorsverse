@@ -18,29 +18,33 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center px-6 py-36 text-center overflow-hidden">
+      <section className="relative flex flex-col items-center justify-center px-6 py-40 sm:py-48 text-center overflow-hidden">
         {/* Grid background */}
-        <div className="absolute inset-0 bg-grid opacity-40" />
-        {/* Top glow orb */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-primary/[0.07] blur-[100px]" />
+        <div className="absolute inset-0 bg-grid opacity-30" />
+        {/* Floating glow orbs */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-primary/[0.08] blur-[120px] animate-float" />
+        <div className="absolute bottom-0 right-[20%] translate-y-1/2 w-[400px] h-[300px] rounded-full bg-[oklch(0.55_0.12_290_/_0.05)] blur-[80px]" />
 
-        <div className="relative mx-auto max-w-3xl space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-1.5 text-sm text-primary">
+        <div className="relative mx-auto max-w-4xl space-y-8">
+          <div className="animate-fade-up delay-1 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-1.5 text-sm text-primary animate-pulse-ring">
             <Zap className="h-3.5 w-3.5" />
             AI-Native Technology Services
           </div>
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="animate-fade-up delay-2 text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl">
             Building Intelligent
             <br />
-            Systems <span className="text-accent-gradient">That Work</span>
+            Systems{" "}
+            <span className="text-gradient-animated">That Work</span>
           </h1>
-          <p className="mx-auto max-w-xl text-lg leading-relaxed text-muted-foreground">
-            北京镜界纪元科技有限公司 — We design and build AI Agents, automation pipelines, and intelligent workflows for businesses ready to operate at the speed of AI.
+          <p className="animate-fade-up delay-3 mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed text-muted-foreground">
+            <span className="text-foreground/80 font-medium">北京镜界纪元科技有限公司</span>
+            <span className="mx-2 text-primary/30">|</span>
+            We design and build AI Agents, automation pipelines, and intelligent workflows for businesses ready to operate at the speed of AI.
           </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="animate-fade-up delay-4 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="#contact"
-              className="inline-flex h-12 items-center gap-2 rounded-lg bg-primary px-7 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.65_0.15_270_/_25%)] hover:scale-[1.02]"
+              className="inline-flex h-12 items-center gap-2 rounded-lg bg-primary px-7 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_30px_oklch(0.65_0.15_270_/_30%)] hover:scale-[1.02] active:scale-[0.98]"
             >
               Get in Touch
               <ArrowRight className="h-4 w-4" />

@@ -173,3 +173,70 @@
   border-color: oklch(0.65 0.15 270 / 25%);
   box-shadow: 0 0 30px oklch(0.65 0.15 270 / 6%), inset 0 1px 0 oklch(0.65 0.15 270 / 8%);
 }
+
+/* Animated gradient text for hero */
+.text-gradient-animated {
+  background: linear-gradient(
+    90deg,
+    oklch(0.7 0.15 260),
+    oklch(0.65 0.18 280),
+    oklch(0.6 0.15 300),
+    oklch(0.65 0.18 280),
+    oklch(0.7 0.15 260)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Staggered fade-in-up */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+@keyframes fade-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.25s; }
+.delay-3 { animation-delay: 0.4s; }
+.delay-4 { animation-delay: 0.55s; }
+
+/* Floating glow orb animation */
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  33% { transform: translate(-48%, -52%) scale(1.05); }
+  66% { transform: translate(-52%, -48%) scale(0.95); }
+}
+
+/* Pulse ring for badge */
+.animate-pulse-ring {
+  position: relative;
+}
+.animate-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid oklch(0.65 0.15 270 / 30%);
+  animation: pulse-ring 3s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
