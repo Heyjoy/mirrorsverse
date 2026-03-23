@@ -70,12 +70,27 @@ export default function Home() {
               AI Engineering, <span className="text-accent-gradient">End to End</span>
             </h2>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <ServiceCard
-              icon={<Bot className="h-5 w-5" />}
-              title="AI Agent Development"
-              description="Custom AI agents that reason, plan, and execute — from conversational assistants to autonomous workflow operators."
-            />
+
+          {/* Bento grid */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Featured card — spans 2 cols on lg */}
+            <div className="group rounded-xl border border-border bg-card/40 p-8 card-glow sm:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col justify-between">
+              <div>
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/[0.1] text-primary transition-colors group-hover:bg-primary/[0.15]">
+                  <Bot className="h-6 w-6" />
+                </div>
+                <h3 className="mb-3 text-2xl font-bold">AI Agent Development</h3>
+                <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
+                  Custom AI agents that reason, plan, and execute — from conversational assistants to autonomous workflow operators. We build agents that integrate with your tools, learn from your data, and operate reliably at scale.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["Multi-Agent Systems", "Tool Calling", "RAG", "Production Deployment"].map((t) => (
+                  <span key={t} className="rounded-md border border-primary/10 bg-primary/[0.04] px-2.5 py-0.5 text-xs text-primary/70">{t}</span>
+                ))}
+              </div>
+            </div>
+
             <ServiceCard
               icon={<Code2 className="h-5 w-5" />}
               title="System Integration"
