@@ -121,6 +121,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Metrics */}
+      <section className="border-t border-border px-6 py-16">
+        <ScrollReveal className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <Metric value="20+" label="AI Agents Deployed" />
+            <Metric value="50ms" label="Avg Response Time" />
+            <Metric value="99.9%" label="System Uptime" />
+            <Metric value="10+" label="Enterprise Clients" />
+          </div>
+        </ScrollReveal>
+      </section>
+
       {/* About */}
       <section id="about" className="border-t border-border px-6 py-28">
         <div className="mx-auto max-w-6xl">
@@ -249,6 +261,17 @@ function ServiceCard({
       <p className="text-sm leading-relaxed text-muted-foreground">
         {description}
       </p>
+    </div>
+  );
+}
+
+function Metric({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="text-center">
+      <p className="text-3xl font-bold tracking-tight text-accent-gradient sm:text-4xl font-mono">
+        {value}
+      </p>
+      <p className="mt-1 text-sm text-muted-foreground">{label}</p>
     </div>
   );
 }
