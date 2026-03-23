@@ -1,4 +1,5 @@
 import { ArrowRight, Bot, Code2, Cpu, Globe, Mail, MapPin, Zap } from "lucide-react";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 export default function Home() {
   return (
@@ -62,19 +63,19 @@ export default function Home() {
       {/* Services */}
       <section id="services" className="relative border-t border-border px-6 py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="mb-16 max-w-2xl">
+          <ScrollReveal className="mb-16 max-w-2xl">
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
               What We Do
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               AI Engineering, <span className="text-accent-gradient">End to End</span>
             </h2>
-          </div>
+          </ScrollReveal>
 
           {/* Bento grid */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ScrollReveal stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {/* Featured card — spans 2 cols on lg */}
-            <div className="group rounded-xl border border-border bg-card/40 p-8 card-glow sm:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col justify-between">
+            <div className="reveal group rounded-xl border border-border bg-card/40 p-8 card-glow sm:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col justify-between">
               <div>
                 <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/[0.1] text-primary transition-colors group-hover:bg-primary/[0.15]">
                   <Bot className="h-6 w-6" />
@@ -116,7 +117,7 @@ export default function Home() {
               title="Consulting & Strategy"
               description="AI readiness assessment, architecture design, and implementation roadmaps tailored to your business context."
             />
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -124,7 +125,7 @@ export default function Home() {
       <section id="about" className="border-t border-border px-6 py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
+            <ScrollReveal>
               <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
                 About Us
               </p>
@@ -142,8 +143,8 @@ export default function Home() {
                   Based in Beijing, we serve clients across industries who need AI capabilities that actually work in production.
                 </p>
               </div>
-            </div>
-            <div className="space-y-5">
+            </ScrollReveal>
+            <ScrollReveal className="space-y-5">
               <div className="rounded-xl border border-border bg-card/50 p-6 card-glow">
                 <p className="mb-4 text-sm font-medium uppercase tracking-widest text-primary/70">
                   Tech Stack
@@ -185,7 +186,7 @@ export default function Home() {
                   Beijing, China
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -195,7 +196,7 @@ export default function Home() {
         {/* Bottom glow orb */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[300px] rounded-full bg-primary/[0.06] blur-[80px]" />
 
-        <div className="relative mx-auto max-w-2xl text-center">
+        <ScrollReveal className="relative mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
             Contact
           </p>
@@ -212,7 +213,7 @@ export default function Home() {
             <Mail className="h-4 w-4" />
             hello@mirrorsverse.com
           </a>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Footer */}
@@ -240,7 +241,7 @@ function ServiceCard({
   description: string;
 }) {
   return (
-    <div className="group rounded-xl border border-border bg-card/40 p-6 card-glow">
+    <div className="reveal group rounded-xl border border-border bg-card/40 p-6 card-glow">
       <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/[0.08] text-primary/70 transition-colors group-hover:text-primary group-hover:bg-primary/[0.12]">
         {icon}
       </div>
