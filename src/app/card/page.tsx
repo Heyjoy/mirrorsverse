@@ -29,7 +29,7 @@ export default function CardPage() {
 
         {/* Tags */}
         <div className="px-5 py-4 flex flex-wrap justify-center gap-1.5">
-          {["交大 AI MBA", "前 ZF·11年", "前 VW/CARIAD", "ASPICE PA", "PMP", "ISO 26262"].map((t) => (
+          {["交大 AI MBA", "前 ZF·11年", "前 VW/CARIAD", "ASPICE PA", "PMP", "CSM"].map((t) => (
             <span key={t} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-[3px] text-[11px] text-muted-foreground/70">{t}</span>
           ))}
         </div>
