@@ -3,60 +3,86 @@ import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "郑海蛟 | Haijiao Zheng — AI 技术创始人",
-  description: "15 年汽车电子 → AI Agent 架构师，镜界纪元创始人",
+  title: "郑海蛟 | Haijiao Zheng — AI Agent 架构师",
+  description: "15 年汽车电子 → AI Agent 架构师，北京镜界纪元科技有限公司创始人",
 };
+
+const orgs = ["交大 AI MBA", "ZF · Volkswagen"];
+const certs = ["ASPICE PA", "TÜV FSP", "PMP", "CSM"];
 
 export default function CardPage() {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-background bg-mesh p-4">
-      {/* Glass card */}
-      <div className="w-full max-w-[360px] rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl shadow-2xl overflow-hidden">
+    <div
+      className="fixed inset-0 flex items-center justify-center p-4"
+      style={{
+        backgroundColor: "#fefcf8",
+        backgroundImage: "radial-gradient(ellipse 70% 50% at 50% -10%, rgba(255,180,60,0.06), transparent)",
+      }}
+    >
+      <div className="w-full max-w-[360px] rounded-[22px] border border-[#e0a030]/[0.12] bg-white/90 shadow-[0_2px_40px_rgba(200,160,60,0.08)] backdrop-blur-2xl overflow-hidden">
 
-        {/* Header band */}
-        <div className="px-6 pt-7 pb-5 text-center">
-          <div className="mx-auto mb-3 flex h-[52px] w-[52px] items-center justify-center rounded-[16px] bg-primary/[0.12] border border-primary/20">
-            <span className="text-xl font-bold font-mono text-accent-gradient">Z</span>
+        {/* ── Identity ── */}
+        <div className="px-6 pt-7 pb-5">
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 mt-0.5 flex h-11 w-11 items-center justify-center rounded-[12px] bg-[#d4a840]/[0.1] border border-[#d4a840]/[0.2]">
+              <span className="text-[18px] font-bold font-mono text-[#b07a10]">Z</span>
+            </div>
+            <div className="min-w-0">
+              <h1 className="text-[20px] font-semibold tracking-tight leading-none text-[#2a2418]">
+                郑海蛟
+              </h1>
+              <p className="text-[12px] mt-1 text-[#8a6a20]/35">Haijiao Zheng</p>
+              <p className="text-[13px] font-medium mt-2.5 leading-tight text-[#b07a10]">
+                AI Agent 架构师
+              </p>
+              <p className="text-[11px] mt-0.5 tracking-wide text-[#b07a10]/45">
+                创始人 · 北京镜界纪元科技有限公司
+              </p>
+            </div>
           </div>
-          <h1 className="text-[22px] font-semibold tracking-tight leading-tight">郑海蛟</h1>
-          <p className="text-[13px] text-muted-foreground/60 mt-0.5">Haijiao Zheng</p>
-          <p className="text-[13px] text-primary font-medium mt-2">AI 架构师 · 北京镜界纪元科技有限公司</p>
-          <p className="text-[12px] text-muted-foreground/50 mt-1">15 年汽车电子 → AI Agent 架构，用 AI 造公司</p>
+          <p className="text-[11.5px] mt-4 leading-relaxed text-[#8a6a20]/35">
+            15 年汽车电子 → AI Agent 架构，用 AI 造公司
+          </p>
         </div>
 
-        {/* Divider */}
-        <div className="mx-6 h-px bg-white/[0.06]" />
+        <div className="mx-5 h-px bg-[#d4a840]/[0.1]" />
 
-        {/* Tags */}
-        <div className="px-5 py-4 flex flex-wrap justify-center gap-1.5">
-          {["交大 AI MBA", "ZF · Volkswagen", "ASPICE PA", "PMP", "CSM", "TÜV FSP"].map((t) => (
-            <span key={t} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-[3px] text-[11px] text-muted-foreground/70">{t}</span>
-          ))}
+        {/* ── Tags: 2 rows ── */}
+        <div className="px-5 py-3.5 flex flex-col gap-2">
+          <div className="flex flex-wrap gap-1.5">
+            {orgs.map((tag) => (
+              <span key={tag} className="rounded-full border border-[#d4a840]/[0.15] bg-[#d4a840]/[0.05] px-2 py-[2.5px] text-[10.5px] leading-none text-[#8a6a20]/60">{tag}</span>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {certs.map((tag) => (
+              <span key={tag} className="rounded-full border border-[#d4a840]/[0.15] bg-[#d4a840]/[0.05] px-2 py-[2.5px] text-[10.5px] leading-none text-[#8a6a20]/60">{tag}</span>
+            ))}
+          </div>
         </div>
 
-        {/* Divider */}
-        <div className="mx-6 h-px bg-white/[0.06]" />
+        <div className="mx-5 h-px bg-[#d4a840]/[0.1]" />
 
-        {/* QR + Actions row */}
+        {/* ── QR + Social ── */}
         <div className="px-5 py-4 flex items-center gap-4">
-          {/* QR */}
-          <div className="shrink-0 w-[88px] h-[88px] rounded-xl overflow-hidden border border-white/[0.06]">
-            <Image src="/wechat-qr.jpg" alt="公众号二维码" width={88} height={88} className="object-cover" />
+          <div className="shrink-0 w-[80px] h-[80px] rounded-[10px] overflow-hidden border border-[#d4a840]/[0.12]">
+            <Image src="/wechat-qr.jpg" alt="公众号二维码" width={80} height={80} className="object-cover" />
           </div>
-          {/* Right side */}
-          <div className="flex-1 min-w-0">
-            <p className="text-[11px] text-muted-foreground/40 uppercase tracking-widest mb-2">公众号 · AI时代漫游指南</p>
-            <p className="text-[11px] text-muted-foreground/30 mb-3">长按识别关注</p>
-            <div className="flex gap-2">
-              <IconBtn href="https://github.com/Heyjoy" icon={<Github className="h-3.5 w-3.5" />} />
-              <IconBtn href="https://www.linkedin.com/in/haijiao-zheng-02934b10/" icon={<Linkedin className="h-3.5 w-3.5" />} />
-              <IconBtn href="mailto:zhenghaijiao@me.com" icon={<Mail className="h-3.5 w-3.5" />} />
+          <div className="flex-1 min-w-0 flex flex-col gap-2.5">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.15em] text-[#8a6a20]/35">公众号</p>
+              <p className="text-[11.5px] mt-0.5 text-[#b07a10]/45">AI时代漫游指南</p>
+            </div>
+            <div className="flex gap-1.5">
+              <IconBtn href="https://github.com/Heyjoy" icon={<Github className="h-3 w-3" />} />
+              <IconBtn href="https://www.linkedin.com/in/haijiao-zheng-02934b10/" icon={<Linkedin className="h-3 w-3" />} />
+              <IconBtn href="mailto:zhenghaijiao@me.com" icon={<Mail className="h-3 w-3" />} />
             </div>
           </div>
         </div>
 
-        {/* Footer */}
-        <a href="/" className="block border-t border-white/[0.06] py-3 text-center text-[12px] text-muted-foreground/40 transition-colors hover:text-primary/60">
+        {/* ── Footer ── */}
+        <a href="/" className="block border-t border-[#d4a840]/[0.1] py-2.5 text-center text-[10.5px] tracking-wider text-[#8a6a20]/25 transition-colors hover:text-[#b07a10]/50">
           mirrorsverse.com
         </a>
       </div>
@@ -67,7 +93,7 @@ export default function CardPage() {
 function IconBtn({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer"
-      className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03] text-muted-foreground/50 transition-all hover:text-primary hover:border-primary/30">
+      className="inline-flex h-7 w-7 items-center justify-center rounded-[8px] border border-[#d4a840]/[0.12] bg-[#d4a840]/[0.04] text-[#8a6a20]/40 transition-all duration-200 hover:text-[#b07a10] hover:border-[#d4a840]/25">
       {icon}
     </a>
   );
