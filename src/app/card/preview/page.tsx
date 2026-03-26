@@ -149,7 +149,7 @@ export default function CardPreview() {
               郑海蛟
             </h1>
             <p className={`text-[13px] mt-0.5 ${t.muted}`}>Haijiao Zheng</p>
-            <p className={`text-[13px] font-medium mt-2 ${t.accent}`}>AI 技术创始人 · 镜界纪元</p>
+            <p className={`text-[13px] font-medium mt-2 ${t.accent}`}>AI 架构师 · 北京镜界纪元科技有限公司</p>
             <p className={`text-[12px] mt-1 ${t.muted}`}>15 年汽车电子 → AI Agent 架构，用 AI 造公司</p>
           </div>
 

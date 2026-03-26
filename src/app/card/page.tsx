@@ -20,7 +20,7 @@ export default function CardPage() {
           </div>
           <h1 className="text-[22px] font-semibold tracking-tight leading-tight">郑海蛟</h1>
           <p className="text-[13px] text-muted-foreground/60 mt-0.5">Haijiao Zheng</p>
-          <p className="text-[13px] text-primary font-medium mt-2">AI 技术创始人 · 镜界纪元</p>
+          <p className="text-[13px] text-primary font-medium mt-2">AI 架构师 · 北京镜界纪元科技有限公司</p>
           <p className="text-[12px] text-muted-foreground/50 mt-1">15 年汽车电子 → AI Agent 架构，用 AI 造公司</p>
         </div>
 
@@ -29,7 +29,7 @@ export default function CardPage() {
 
         {/* Tags */}
         <div className="px-5 py-4 flex flex-wrap justify-center gap-1.5">
-          {["交大 AI MBA", "前 ZF·11年", "前 VW/CARIAD", "ASPICE PA", "PMP", "CSM"].map((t) => (
+          {["交大 AI MBA", "ZF · Volkswagen", "ASPICE PA", "PMP", "CSM", "TÜV FSP"].map((t) => (
             <span key={t} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-[3px] text-[11px] text-muted-foreground/70">{t}</span>
           ))}
         </div>
