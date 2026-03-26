@@ -75,9 +75,37 @@ const themes = [
     footer: "border-[#f48fb1]/[0.08] text-white/25",
     monogram: "text-[#f48fb1]",
   },
+  {
+    name: "F · 赛博霓虹",
+    bg: "bg-[#05010d]",
+    mesh: "radial-gradient(ellipse 60% 40% at 30% -10%, rgba(0,255,255,0.06), transparent), radial-gradient(ellipse 50% 40% at 70% 110%, rgba(255,0,200,0.05), transparent), radial-gradient(ellipse 40% 30% at 50% 50%, rgba(100,0,255,0.03), transparent)",
+    card: "border-[#0ff]/[0.08] bg-[#0ff]/[0.01]",
+    accent: "text-[#0ff]",
+    accentBg: "bg-[#0ff]/[0.08] border-[#0ff]/20",
+    tag: "border-[#0ff]/[0.08] bg-[#0ff]/[0.02] text-[#0ff]/40",
+    muted: "text-[#0ff]/25",
+    divider: "bg-[#0ff]/[0.06]",
+    iconBtn: "border-[#0ff]/[0.1] bg-[#0ff]/[0.02] text-[#0ff]/30 hover:text-[#0ff]",
+    footer: "border-[#0ff]/[0.06] text-[#0ff]/20",
+    monogram: "text-[#0ff]",
+  },
+  {
+    name: "G · 星际钛灰",
+    bg: "bg-[#0c0c10]",
+    mesh: "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(160,180,220,0.05), transparent), radial-gradient(ellipse 40% 40% at 80% 80%, rgba(100,120,180,0.03), transparent)",
+    card: "border-[#a0b4dc]/[0.1] bg-[#a0b4dc]/[0.02] shadow-[0_0_60px_rgba(160,180,220,0.03)]",
+    accent: "text-[#c8d6f0]",
+    accentBg: "bg-[#a0b4dc]/[0.08] border-[#a0b4dc]/15",
+    tag: "border-[#a0b4dc]/[0.08] bg-[#a0b4dc]/[0.03] text-[#a0b4dc]/45",
+    muted: "text-[#a0b4dc]/30",
+    divider: "bg-[#a0b4dc]/[0.06]",
+    iconBtn: "border-[#a0b4dc]/[0.08] bg-[#a0b4dc]/[0.02] text-[#a0b4dc]/30 hover:text-[#c8d6f0]",
+    footer: "border-[#a0b4dc]/[0.06] text-[#a0b4dc]/20",
+    monogram: "text-[#c8d6f0]",
+  },
 ];
 
-const tags = ["交大 AI MBA", "ZF · Volkswagen", "ASPICE PA", "PMP", "CSM"];
+const tags = ["交大 AI MBA", "ZF · Volkswagen", "ASPICE PA", "PMP", "CSM", "TÜV FSP"];
 
 export default function CardPreview() {
   const [idx, setIdx] = useState(0);
