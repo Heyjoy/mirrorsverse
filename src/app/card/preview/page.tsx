@@ -112,7 +112,8 @@ const themes = [
   },
 ];
 
-const tags = ["交大 AI MBA", "ZF · Volkswagen", "ASPICE PA", "PMP", "CSM", "TÜV FSP"];
+const orgs = ["交大 AI MBA", "ZF · Volkswagen"];
+const certs = ["ASPICE PA", "TÜV FSP", "PMP", "CSM"];
 
 export default function CardPreview() {
   const [idx, setIdx] = useState(0);
@@ -181,16 +182,18 @@ export default function CardPreview() {
 
           <div className={`mx-5 h-px ${t.divider}`} />
 
-          {/* ── Tags ── */}
-          <div className="px-5 py-3.5 flex flex-wrap gap-1.5">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className={`rounded-full border px-2 py-[2.5px] text-[10.5px] leading-none ${t.tag}`}
-              >
-                {tag}
-              </span>
-            ))}
+          {/* ── Tags: 2 rows ── */}
+          <div className="px-5 py-3.5 flex flex-col gap-2">
+            <div className="flex flex-wrap gap-1.5">
+              {orgs.map((tag) => (
+                <span key={tag} className={`rounded-full border px-2 py-[2.5px] text-[10.5px] leading-none ${t.tag}`}>{tag}</span>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {certs.map((tag) => (
+                <span key={tag} className={`rounded-full border px-2 py-[2.5px] text-[10.5px] leading-none ${t.tag}`}>{tag}</span>
+              ))}
+            </div>
           </div>
 
           <div className={`mx-5 h-px ${t.divider}`} />
