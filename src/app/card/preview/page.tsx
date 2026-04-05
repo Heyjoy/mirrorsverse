@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { BusinessCard } from "@/components/business-card";
 
 const themes = [
   {
@@ -202,16 +201,13 @@ const themes = [
   },
 ];
 
-const orgs = ["交大 AI MBA", "ZF · Volkswagen"];
-const certs = ["ASPICE PA", "TÜV FSP", "PMP", "CSM"];
-
 export default function CardPreview() {
   const [idx, setIdx] = useState(0);
   const t = themes[idx];
 
   return (
     <div className="min-h-screen bg-[#050506] flex flex-col items-center justify-center px-4 py-6 gap-5">
-      {/* Theme pills — horizontal scroll on mobile */}
+      {/* Theme pills */}
       <div className="flex flex-wrap justify-center gap-1.5 max-w-[440px]">
         {themes.map((theme, i) => (
           <button
@@ -239,95 +235,7 @@ export default function CardPreview() {
           backgroundImage: t.mesh,
         }}
       >
-        <div
-          className={`w-full rounded-[22px] border backdrop-blur-2xl overflow-hidden transition-all duration-500 ${t.card}`}
-        >
-          {/* ── Identity block ── */}
-          <div className="px-6 pt-7 pb-5">
-            <div className="flex items-start gap-4">
-              {/* Monogram */}
-              <div className="shrink-0 mt-0.5 flex h-11 w-11 items-center justify-center rounded-[12px] bg-current/[0.08] border border-current/[0.12]"
-                style={{ color: t.accent.includes("#") ? t.accent.match(/#[0-9a-f]+/i)?.[0] : undefined }}>
-                <span className={`text-[18px] font-bold font-mono ${t.accent}`}>Z</span>
-              </div>
-              {/* Name + titles */}
-              <div className="min-w-0">
-                <h1 className={`text-[20px] font-semibold tracking-tight leading-none ${t.title}`}>
-                  郑海蛟
-                </h1>
-                <p className={`text-[12px] mt-1 ${t.sub}`}>Haijiao Zheng</p>
-                <p className={`text-[13px] font-medium mt-2.5 leading-tight ${t.accent}`}>
-                  AI Agent 架构师
-                </p>
-                <p className={`text-[11px] mt-0.5 tracking-wide ${t.role}`}>
-                  创始人 · 北京镜界纪元科技有限公司
-                </p>
-              </div>
-            </div>
-            {/* Tagline */}
-            <p className={`text-[11.5px] mt-4 leading-relaxed ${t.sub}`}>
-              15 年汽车电子 → AI Agent 架构，用 AI 造公司
-            </p>
-          </div>
-
-          <div className={`mx-5 h-px ${t.divider}`} />
-
-          {/* ── Tags: 2 rows ── */}
-          <div className="px-5 py-3.5 flex flex-col gap-2">
-            <div className="flex flex-wrap gap-1.5">
-              {orgs.map((tag) => (
-                <span key={tag} className={`rounded-full border px-2 py-[2.5px] text-[10.5px] leading-none ${t.tag}`}>{tag}</span>
-              ))}
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {certs.map((tag) => (
-                <span key={tag} className={`rounded-full border px-2 py-[2.5px] text-[10.5px] leading-none ${t.tag}`}>{tag}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className={`mx-5 h-px ${t.divider}`} />
-
-          {/* ── QR + Social ── */}
-          <div className="px-5 py-4 flex items-center gap-4">
-            <div className={`shrink-0 w-[80px] h-[80px] rounded-[10px] overflow-hidden border ${t.qrBorder}`}>
-              <Image
-                src="/wechat-qr.jpg"
-                alt="公众号二维码"
-                width={80}
-                height={80}
-                className="object-cover"
-              />
-            </div>
-            <div className="flex-1 min-w-0 flex flex-col gap-2.5">
-              <div>
-                <p className={`text-[10px] uppercase tracking-[0.15em] ${t.sub}`}>
-                  公众号
-                </p>
-                <p className={`text-[11.5px] mt-0.5 ${t.role}`}>
-                  AI时代漫游指南
-                </p>
-              </div>
-              <div className="flex gap-1.5">
-                {[Github, Linkedin, Mail].map((Icon, i) => (
-                  <span
-                    key={i}
-                    className={`inline-flex h-7 w-7 items-center justify-center rounded-[8px] border transition-all duration-200 ${t.iconBtn}`}
-                  >
-                    <Icon className="h-3 w-3" />
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* ── Footer ── */}
-          <div className={`border-t ${t.divider} py-2.5 text-center`}>
-            <span className={`text-[10.5px] tracking-wider ${t.sub}`}>
-              mirrorsverse.com
-            </span>
-          </div>
-        </div>
+        <BusinessCard theme={t} linked={false} />
       </div>
     </div>
   );
