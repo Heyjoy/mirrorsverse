@@ -135,6 +135,40 @@ export default async function LocaleHome({
         </ScrollReveal>
       </section>
 
+      {/* Things We Ship */}
+      <section className="border-t border-border px-6 py-28">
+        <div className="mx-auto max-w-6xl">
+          <ScrollReveal className="mb-4 max-w-2xl">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
+              {t.thingsWeShip.eyebrow}
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              {t.thingsWeShip.title} <span className="text-accent-gradient">{t.thingsWeShip.titleAccent}</span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal className="mb-12 max-w-2xl">
+            <p className="text-xs text-muted-foreground/60 italic">{t.thingsWeShip.note}</p>
+          </ScrollReveal>
+
+          <ScrollReveal stagger className="grid gap-5 sm:grid-cols-2">
+            {t.thingsWeShip.items.map((item) => (
+              <div key={item.archetype} className="reveal rounded-xl border border-border bg-card/40 p-6 card-glow">
+                <h3 className="mb-2 text-lg font-semibold">{item.archetype}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{item.scenario}</p>
+                <div className="mb-4 flex flex-wrap gap-1.5">
+                  {item.stack.map((s) => (
+                    <span key={s} className="rounded-md border border-primary/10 bg-primary/[0.04] px-2 py-0.5 text-xs text-primary/70">{s}</span>
+                  ))}
+                </div>
+                <p className="border-t border-border/60 pt-3 text-xs text-foreground/70">
+                  <span className="font-mono text-primary/60">→</span> {item.result}
+                </p>
+              </div>
+            ))}
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* About */}
       <section id="about" className="border-t border-border px-6 py-28">
         <div className="mx-auto max-w-6xl">

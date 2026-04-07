@@ -8,6 +8,18 @@ export const defaultLocale: Locale = "zh";
 
 export type Dict = {
   nav: { services: string; about: string; contact: string };
+  thingsWeShip: {
+    eyebrow: string;
+    title: string;
+    titleAccent: string;
+    note: string;
+    items: {
+      archetype: string;
+      scenario: string;
+      stack: string[];
+      result: string;
+    }[];
+  };
   howWeWork: {
     eyebrow: string;
     title: string;
@@ -65,6 +77,38 @@ export type Dict = {
 
 const en: Dict = {
   nav: { services: "Services", about: "About", contact: "Contact" },
+  thingsWeShip: {
+    eyebrow: "Things we ship",
+    title: "Project shapes",
+    titleAccent: "we know how to run",
+    note: "Anonymized archetypes from real engagements. Names omitted on purpose.",
+    items: [
+      {
+        archetype: "Internal copilot",
+        scenario: "A model wired into a team's existing tools (CRM / docs / ticketing) so frontline staff stop context-switching across 6 tabs.",
+        stack: ["Agent", "Tool calling", "RAG over internal docs", "SSO"],
+        result: "Median task time cut from minutes to seconds; rolled out to a full ops team.",
+      },
+      {
+        archetype: "Document pipeline",
+        scenario: "An ingest path that reads messy PDFs / scans / forms and lands clean structured records into the customer's database, with humans in the loop only on low-confidence rows.",
+        stack: ["OCR", "Schema-constrained extraction", "Validation rules", "Queue + retries"],
+        result: "Hours of manual entry per day eliminated; sub-1% error rate on high-confidence rows.",
+      },
+      {
+        archetype: "Long-running agent worker",
+        scenario: "An agent that owns a multi-step business process end-to-end — gathering context, deciding, executing, and reporting — running unattended and recovering from failures.",
+        stack: ["Multi-step planning", "State persistence", "Idempotent tools", "Observability"],
+        result: "Replaced a daily human workflow; runs on cron, escalates on edge cases.",
+      },
+      {
+        archetype: "Domain assistant",
+        scenario: "A specialized chat surface trained on a customer's vertical (legal / medical / engineering), answering with sources and refusing to bluff.",
+        stack: ["Embedding pipeline", "Hybrid retrieval", "Citation enforcement", "Eval harness"],
+        result: "Accepted by domain experts who'd previously rejected generic chatbots.",
+      },
+    ],
+  },
   howWeWork: {
     eyebrow: "How we work",
     title: "Three steps,",
@@ -146,6 +190,38 @@ const en: Dict = {
 
 const zh: Dict = {
   nav: { services: "我们解决什么", about: "关于", contact: "联系" },
+  thingsWeShip: {
+    eyebrow: "我们做过这种事",
+    title: "我们熟悉的",
+    titleAccent: "项目形态",
+    note: "来自真实项目的脱敏原型。客户名故意省略。",
+    items: [
+      {
+        archetype: "内部 copilot",
+        scenario: "把模型接进团队现有工具（CRM / 文档 / 工单），让一线员工不用在 6 个 tab 间来回切。",
+        stack: ["Agent", "工具调用", "内部文档 RAG", "SSO 单点登录"],
+        result: "单任务中位时间从分钟降到秒级；已在一整个运营团队铺开。",
+      },
+      {
+        archetype: "文档处理流水线",
+        scenario: "把杂乱的 PDF / 扫描件 / 表单读进来，结构化落库，只在低置信度行上交人审核。",
+        stack: ["OCR", "结构化抽取", "校验规则", "队列 + 重试"],
+        result: "替代每天数小时人工录入；高置信行错误率 < 1%。",
+      },
+      {
+        archetype: "长流程 Agent worker",
+        scenario: "由 Agent 端到端跑通一个多步业务流程——收集上下文、决策、执行、汇报——无人值守，失败可恢复。",
+        stack: ["多步规划", "状态持久化", "幂等工具", "可观测性"],
+        result: "替代每日人工流程；按 cron 跑，边界情况自动升级。",
+      },
+      {
+        archetype: "领域助手",
+        scenario: "针对客户垂直领域（法律 / 医疗 / 工程）训出来的对话面，带引用、不瞎编。",
+        stack: ["Embedding 管道", "混合检索", "强制引用", "评测套件"],
+        result: "被以前拒绝通用 chatbot 的领域专家接受。",
+      },
+    ],
+  },
   howWeWork: {
     eyebrow: "我们怎么合作",
     title: "三步，",
