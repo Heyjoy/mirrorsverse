@@ -52,8 +52,11 @@ export default async function LocaleHome({
           <h1 className="animate-fade-up delay-2 text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl">
             {t.hero.titleLine1}
             <br />
-            {t.hero.titleLine2}{" "}
-            <span className="text-gradient-animated">{t.hero.titleAccent}</span>
+            {t.hero.titleLine2}
+            {locale === "zh" ? <br /> : " "}
+            <span className="text-gradient-animated inline-block">
+              {t.hero.titleAccent}
+            </span>
           </h1>
           <p className="animate-fade-up delay-2 text-lg sm:text-xl text-muted-foreground/50 tracking-wide">
             {t.hero.tagline}
