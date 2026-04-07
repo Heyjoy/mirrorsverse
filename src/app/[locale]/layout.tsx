@@ -17,11 +17,11 @@ export async function generateMetadata({
   const isZh = locale === "zh";
   return {
     title: isZh
-      ? "镜界纪元 | Mirrorsverse — AI 技术服务"
-      : "Mirrorsverse — AI Technology Services",
+      ? "镜界纪元 | Mirrorsverse — 工程师做的，不是顾问讲的"
+      : "Mirrorsverse — Engineered, not pitched",
     description: isZh
-      ? "北京镜界纪元科技有限公司 — AI Agent 开发与技术服务"
-      : "Beijing Mirrorsverse Technology — AI Agent development and engineering services",
+      ? "北京镜界纪元科技有限公司 — 把模型接进真实业务的小型工程团队"
+      : "Beijing Mirrorsverse — a small engineering team wiring models into real workflows",
     alternates: {
       canonical: `/${locale}`,
       languages: { zh: "/zh", en: "/en" },
