@@ -8,6 +8,14 @@ export const defaultLocale: Locale = "zh";
 
 export type Dict = {
   nav: { services: string; about: string; contact: string };
+  howWeWork: {
+    eyebrow: string;
+    title: string;
+    titleAccent: string;
+    steps: { num: string; title: string; desc: string }[];
+    sizesLabel: string;
+    sizes: { name: string; range: string; desc: string }[];
+  };
   hero: {
     badge: string;
     titleLine1: string;
@@ -57,6 +65,22 @@ export type Dict = {
 
 const en: Dict = {
   nav: { services: "Services", about: "About", contact: "Contact" },
+  howWeWork: {
+    eyebrow: "How we work",
+    title: "Three steps,",
+    titleAccent: "no theatre",
+    steps: [
+      { num: "01", title: "Send the rough shape", desc: "An email with what you're trying to do. Doesn't need a brief or a deck." },
+      { num: "02", title: "We write back within a week", desc: "Honest read on whether we can help, what it would take, what we'd push back on." },
+      { num: "03", title: "Start small, ship fast", desc: "We pick the smallest version that proves the thing, then iterate against real usage." },
+    ],
+    sizesLabel: "Engagements we typically take",
+    sizes: [
+      { name: "One-week prototype", range: "5–7 days", desc: "A running thing on your stack with real data. Validate the idea before committing." },
+      { name: "Multi-week build", range: "3–8 weeks", desc: "A production system shipped, monitored, and handed off — or we keep maintaining it." },
+      { name: "Embedded engagement", range: "3+ months", desc: "We sit inside your team and ship features on your roadmap." },
+    ],
+  },
   hero: {
     badge: "Engineered, not pitched",
     titleLine1: "We wire models",
@@ -122,6 +146,22 @@ const en: Dict = {
 
 const zh: Dict = {
   nav: { services: "我们解决什么", about: "关于", contact: "联系" },
+  howWeWork: {
+    eyebrow: "我们怎么合作",
+    title: "三步，",
+    titleAccent: "没有戏剧",
+    steps: [
+      { num: "01", title: "把大概描述发过来", desc: "一封邮件说清你想做什么。不需要 brief，也不需要 PPT。" },
+      { num: "02", title: "我们一周内回信", desc: "诚实告诉你能不能做、要花多少、哪些地方我们会反对。" },
+      { num: "03", title: "从小开始，快速上线", desc: "先做能验证想法的最小版本，再按真实使用迭代。" },
+    ],
+    sizesLabel: "我们常接的项目尺寸",
+    sizes: [
+      { name: "一周原型", range: "5–7 天", desc: "在你的技术栈上跑出能看的真实原型，决定是否值得继续投入。" },
+      { name: "数周交付", range: "3–8 周", desc: "上线一个完整生产系统，带监控、可移交，或者交给我们继续维护。" },
+      { name: "嵌入式合作", range: "3 个月起", desc: "我们坐进你的团队，按你的 roadmap 一起交付。" },
+    ],
+  },
   hero: {
     badge: "工程师做的，不是顾问讲的",
     titleLine1: "我们把模型",

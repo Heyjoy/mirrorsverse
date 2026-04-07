@@ -197,6 +197,47 @@ export default async function LocaleHome({
         </div>
       </section>
 
+      {/* How We Work */}
+      <section className="border-t border-border px-6 py-28">
+        <div className="mx-auto max-w-6xl">
+          <ScrollReveal className="mb-16 max-w-2xl">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
+              {t.howWeWork.eyebrow}
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              {t.howWeWork.title} <span className="text-accent-gradient">{t.howWeWork.titleAccent}</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal stagger className="mb-16 grid gap-6 sm:grid-cols-3">
+            {t.howWeWork.steps.map((step) => (
+              <div key={step.num} className="reveal rounded-xl border border-border bg-card/40 p-6 card-glow">
+                <p className="mb-3 font-mono text-sm text-accent-gradient">{step.num}</p>
+                <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
+              </div>
+            ))}
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <p className="mb-5 text-sm font-medium uppercase tracking-widest text-primary/70">
+              {t.howWeWork.sizesLabel}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {t.howWeWork.sizes.map((size) => (
+                <div key={size.name} className="rounded-xl border border-border bg-card/30 p-5">
+                  <div className="mb-2 flex items-baseline justify-between">
+                    <h4 className="text-base font-semibold">{size.name}</h4>
+                    <span className="font-mono text-xs text-primary/70">{size.range}</span>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{size.desc}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="relative border-t border-border px-6 py-28 overflow-hidden">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[300px] rounded-full bg-primary/[0.06] blur-[80px]" />
