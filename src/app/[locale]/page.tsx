@@ -44,7 +44,7 @@ export default async function LocaleHome({
       </header>
 
       {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center px-6 py-40 sm:py-48 text-center overflow-hidden">
+      <section className="relative flex flex-col items-center justify-center px-6 py-24 sm:py-40 lg:py-48 text-center overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-primary/[0.08] blur-[120px] animate-float" />
         <div className="absolute bottom-0 right-[20%] translate-y-1/2 w-[400px] h-[300px] rounded-full bg-[oklch(0.55_0.12_290_/_0.05)] blur-[80px]" />
