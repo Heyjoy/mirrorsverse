@@ -298,12 +298,24 @@ export default async function LocaleHome({
       {/* Footer */}
       <footer className="mt-auto border-t border-border px-6 py-8">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-sm text-muted-foreground font-mono text-accent-gradient">
-            Mirrorsverse
-          </p>
-          <p className="text-sm text-muted-foreground">
-            {t.footer.copyright.replace("{year}", String(new Date().getFullYear()))}
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-sm text-muted-foreground font-mono text-accent-gradient">
+              Mirrorsverse
+            </p>
+            <span className="text-muted-foreground/30">·</span>
+            <a href="/card" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+              {locale === "zh" ? "名片" : "Card"}
+            </a>
+          </div>
+          <div className="flex flex-col items-center gap-1 sm:items-end">
+            <p className="text-sm text-muted-foreground">
+              {t.footer.copyright.replace("{year}", String(new Date().getFullYear()))}
+            </p>
+            <p className="font-mono text-[10px] text-muted-foreground/40">
+              {locale === "zh" ? "上次部署" : "Last shipped"}{" "}
+              {new Date().toISOString().slice(0, 10)}
+            </p>
+          </div>
         </div>
       </footer>
     </div>
