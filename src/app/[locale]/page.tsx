@@ -62,8 +62,6 @@ export default async function LocaleHome({
             {t.hero.tagline}
           </p>
           <p className="animate-fade-up delay-3 mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground">
-            <span className="text-foreground/80 font-medium">{t.hero.company}</span>
-            <span className="mx-2 text-primary/30">|</span>
             {t.hero.intro}
           </p>
           <div className="animate-fade-up delay-4 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
