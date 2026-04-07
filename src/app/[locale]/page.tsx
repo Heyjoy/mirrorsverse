@@ -129,7 +129,7 @@ export default async function LocaleHome({
         <ScrollReveal className="mx-auto max-w-6xl">
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {t.metrics.map((m) => (
-              <Metric key={m.label} value={m.value} label={m.label} />
+              <Metric key={m.label} value={m.value} label={m.label} source={m.source} />
             ))}
           </div>
         </ScrollReveal>
@@ -330,13 +330,14 @@ function ServiceCard({
   );
 }
 
-function Metric({ value, label }: { value: string; label: string }) {
+function Metric({ value, label, source }: { value: string; label: string; source: string }) {
   return (
     <div className="text-center">
       <p className="text-3xl font-bold tracking-tight text-accent-gradient sm:text-4xl font-mono">
         {value}
       </p>
       <p className="mt-1 text-sm text-muted-foreground">{label}</p>
+      <p className="mt-1 text-[11px] text-muted-foreground/50 italic">{source}</p>
     </div>
   );
 }

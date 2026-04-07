@@ -50,7 +50,7 @@ export type Dict = {
     };
     items: { title: string; desc: string }[];
   };
-  metrics: { value: string; label: string }[];
+  metrics: { value: string; label: string; source: string }[];
   about: {
     eyebrow: string;
     title: string;
@@ -155,10 +155,10 @@ const en: Dict = {
     ],
   },
   metrics: [
-    { value: "20+", label: "Systems in production" },
-    { value: "50ms", label: "Median latency" },
-    { value: "99.9%", label: "Uptime under load" },
-    { value: "10+", label: "Teams shipping" },
+    { value: "20+", label: "Systems in production", source: "across all archetypes" },
+    { value: "50ms", label: "Median latency", source: "internal copilots, p50" },
+    { value: "99.9%", label: "Uptime under load", source: "long-running agent workers" },
+    { value: "10+", label: "Teams shipping", source: "current + past engagements" },
   ],
   about: {
     eyebrow: "About",
@@ -268,10 +268,10 @@ const zh: Dict = {
     ],
   },
   metrics: [
-    { value: "20+", label: "上线运行的系统" },
-    { value: "50ms", label: "中位响应延迟" },
-    { value: "99.9%", label: "高负载可用率" },
-    { value: "10+", label: "在跑的客户团队" },
+    { value: "20+", label: "上线运行的系统", source: "覆盖所有项目原型" },
+    { value: "50ms", label: "中位响应延迟", source: "内部 copilot p50" },
+    { value: "99.9%", label: "高负载可用率", source: "长流程 Agent worker" },
+    { value: "10+", label: "在跑的客户团队", source: "当前 + 历史合作" },
   ],
   about: {
     eyebrow: "关于",
