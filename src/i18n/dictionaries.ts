@@ -58,25 +58,25 @@ export type Dict = {
 const en: Dict = {
   nav: { services: "Services", about: "About", contact: "Contact" },
   hero: {
-    badge: "AI-Native Technology Services",
-    titleLine1: "Building Intelligent",
-    titleLine2: "Systems",
-    titleAccent: "That Work",
-    tagline: "Engineering AI systems that ship, not slides",
+    badge: "Engineered, not pitched",
+    titleLine1: "We wire models",
+    titleLine2: "into real workflows",
+    titleAccent: "engineered to ship",
+    tagline: "Models in production, not slides",
     company: "Beijing Mirrorsverse Technology Co., Ltd.",
     intro:
-      "We design and build AI Agents, automation pipelines, and intelligent workflows for businesses ready to operate at the speed of AI.",
-    ctaPrimary: "Get in Touch",
-    ctaSecondary: "Our Services",
+      "Engineers wiring models into production — not demos, not slides. Systems that run, change, and scale, owned end to end by the people who built them.",
+    ctaPrimary: "Talk to engineering",
+    ctaSecondary: "What we solve",
   },
   services: {
-    eyebrow: "What We Do",
-    title: "AI Engineering,",
-    titleAccent: "End to End",
+    eyebrow: "What we solve",
+    title: "Engineered end to end,",
+    titleAccent: "not consulted",
     featured: {
-      title: "AI Agent Development",
-      desc: "Custom AI agents that reason, plan, and execute — from conversational assistants to autonomous workflow operators. We build agents that integrate with your tools, learn from your data, and operate reliably at scale.",
-      tags: ["Multi-Agent Systems", "Tool Calling", "RAG", "Production Deployment"],
+      title: "Models, wired to workflows",
+      desc: "From RAG and agents to long-running automation — we design it, write the code, ship it to production, and stay on call. Your team uses it the next day, not next quarter.",
+      tags: ["Agents", "RAG", "Tool calling", "On-call ownership"],
     },
     items: [
       { title: "System Integration", desc: "Connect AI capabilities to your existing infrastructure. APIs, data pipelines, and enterprise system bridges." },
@@ -121,27 +121,27 @@ const en: Dict = {
 };
 
 const zh: Dict = {
-  nav: { services: "服务能力", about: "关于我们", contact: "联系" },
+  nav: { services: "我们解决什么", about: "关于", contact: "联系" },
   hero: {
-    badge: "AI 原生技术服务",
-    titleLine1: "构建真正能用的",
-    titleLine2: "智能系统",
-    titleAccent: "上线即产出",
-    tagline: "Engineering AI systems that ship, not slides",
+    badge: "工程师做的，不是顾问讲的",
+    titleLine1: "我们把模型",
+    titleLine2: "接进真实业务",
+    titleAccent: "上线即交付",
+    tagline: "Models in production, not slides",
     company: "北京镜界纪元科技有限公司",
     intro:
-      "我们为准备好以 AI 速度运转的业务团队设计与交付 AI Agent、自动化管道与智能工作流——不止是 demo，是能跑在生产里的系统。",
-    ctaPrimary: "联系我们",
-    ctaSecondary: "查看服务",
+      "工程师把模型接进生产工作流——不是 demo，不是 PPT，是能跑、能改、能扩的系统，由写它的人一路负责到底。",
+    ctaPrimary: "聊聊你的项目",
+    ctaSecondary: "看看我们解决什么",
   },
   services: {
-    eyebrow: "我们做什么",
-    title: "AI 工程,",
-    titleAccent: "全链路交付",
+    eyebrow: "我们解决的问题",
+    title: "工程交付，全链路负责，",
+    titleAccent: "不是顾问",
     featured: {
-      title: "AI Agent 开发",
-      desc: "能推理、能规划、能执行的定制 AI Agent——从对话助手到自主工作流执行体。我们构建的 Agent 与你的工具栈集成、从你的数据中学习，并能在生产规模下稳定运行。",
-      tags: ["多 Agent 系统", "Tool Calling", "RAG", "生产部署"],
+      title: "把模型接进工作流",
+      desc: "从 RAG、Agent 到长流程自动化——我们设计、写代码、上线、值班。你的团队第二天就能用，而不是下个季度。",
+      tags: ["Agent", "RAG", "工具调用", "上线后值班"],
     },
     items: [
       { title: "系统集成", desc: "把 AI 能力接入你已有的基础设施。API、数据管道、企业系统桥接。" },
