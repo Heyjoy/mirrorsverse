@@ -26,9 +26,14 @@ export default async function LocaleHome({
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b border-border bg-background/60 backdrop-blur-xl">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <span className="text-lg font-semibold tracking-tight font-mono text-accent-gradient">
-            Mirrorsverse
-          </span>
+          <div className="flex items-baseline gap-3">
+            <span className="text-lg font-semibold tracking-tight font-mono text-accent-gradient">
+              Mirrorsverse
+            </span>
+            <span className="hidden sm:inline text-xs text-muted-foreground/60 border-l border-border/60 pl-3">
+              {t.hero.company}
+            </span>
+          </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a href="#services" className="hover:text-primary transition-colors">{t.nav.services}</a>
             <a href="#about" className="hover:text-primary transition-colors">{t.nav.about}</a>
