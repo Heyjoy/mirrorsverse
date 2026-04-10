@@ -286,7 +286,7 @@ export default async function LocaleHome({
           <p className="mb-6 text-sm text-muted-foreground/50">{t.contact.tagline}</p>
           <p className="mb-10 text-muted-foreground leading-relaxed">{t.contact.body}</p>
           <a
-            href="mailto:hello@mirrorsverse.com"
+            href="mailto:contact@mirrorsverse.com"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.65_0.15_270_/_25%)] hover:scale-[1.02]"
           >
             <Mail className="h-4 w-4" />
