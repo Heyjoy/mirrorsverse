@@ -105,7 +105,7 @@ export function BusinessCard({ theme: t, linked = true }: BusinessCardProps) {
 
       {/* ── Footer ── */}
       {linked ? (
-        <a href="/" className={`block border-t ${t.divider} py-2.5 text-center text-[10.5px] tracking-wider ${t.sub} transition-colors hover:opacity-70`}>
+        <a href="/zh" className={`block border-t ${t.divider} py-2.5 text-center text-[10.5px] tracking-wider ${t.sub} transition-colors hover:opacity-70`}>
           {cardOwner.site}
         </a>
       ) : (
