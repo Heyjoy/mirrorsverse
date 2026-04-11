@@ -14,7 +14,7 @@ export default function NotFound() {
           页面不存在
         </p>
         <a
-          href="/"
+          href="/zh"
           className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:shadow-[0_0_24px_oklch(0.65_0.15_270_/_25%)] hover:scale-[1.02]"
         >
           <ArrowLeft className="h-4 w-4" />

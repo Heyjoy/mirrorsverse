@@ -134,66 +134,27 @@
   }
 }
 
-/* Atmospheric background mesh */
+/* Subtle background tint — no mesh, no orbs */
 .bg-mesh {
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, oklch(0.65 0.15 270 / 8%), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 50%, oklch(0.5 0.1 290 / 5%), transparent),
-    radial-gradient(ellipse 50% 50% at 20% 80%, oklch(0.55 0.12 250 / 4%), transparent);
+  background: var(--background);
 }
 
-/* Dot grid pattern */
-.bg-grid {
-  background-image: radial-gradient(oklch(0.65 0.08 270 / 15%) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-/* Glow effects */
-.glow-border {
-  border-color: oklch(0.65 0.15 270 / 20%);
-}
-.glow-border:hover {
-  border-color: oklch(0.65 0.15 270 / 40%);
-  box-shadow: 0 0 20px oklch(0.65 0.15 270 / 8%);
-}
-
-/* Accent text gradient */
+/* Accent text — flat color, no gradient */
 .text-accent-gradient {
-  background: linear-gradient(135deg, oklch(0.7 0.15 260), oklch(0.6 0.18 280));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 
-/* Card glow on hover */
+/* Hero accent — same flat color, slightly brighter */
+.text-gradient-animated {
+  color: var(--primary);
+}
+
+/* Card hover — subtle border shift, no glow */
 .card-glow {
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.2s ease-out;
 }
 .card-glow:hover {
-  border-color: oklch(0.65 0.15 270 / 25%);
-  box-shadow: 0 0 30px oklch(0.65 0.15 270 / 6%), inset 0 1px 0 oklch(0.65 0.15 270 / 8%);
-}
-
-/* Animated gradient text for hero */
-.text-gradient-animated {
-  background: linear-gradient(
-    90deg,
-    oklch(0.7 0.15 260),
-    oklch(0.65 0.18 280),
-    oklch(0.6 0.15 300),
-    oklch(0.65 0.18 280),
-    oklch(0.7 0.15 260)
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 6s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  border-color: var(--primary);
 }
 
 /* Staggered fade-in-up */
@@ -212,34 +173,7 @@
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 
-/* Floating glow orb animation */
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  33% { transform: translate(-48%, -52%) scale(1.05); }
-  66% { transform: translate(-52%, -48%) scale(0.95); }
-}
-
-/* Pulse ring for badge */
-.animate-pulse-ring {
-  position: relative;
-}
-.animate-pulse-ring::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  border: 1px solid oklch(0.65 0.15 270 / 30%);
-  animation: pulse-ring 3s ease-in-out infinite;
-}
-
-@keyframes pulse-ring {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-}
+/* (removed: float animation, pulse-ring — AI aesthetic stripped) */
 
 /* Scroll-reveal: hidden by default, revealed when .is-visible is added */
 .reveal {
@@ -263,4 +197,51 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Reduced motion: disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-float,
+  .animate-pulse-ring::before,
+  .text-gradient-animated,
+  .reveal {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .reveal-stagger > .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* No-JS fallback: show all content */
+@media (scripting: none) {
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Skip nav */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 0 0 6px 6px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.skip-nav:focus {
+  top: 0;
 }

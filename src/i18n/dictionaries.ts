@@ -58,6 +58,7 @@ export type Dict = {
     tagline: string;
     paragraphs: string[];
     techStackLabel: string;
+    techStack: string[];
     companyLabel: string;
     companyName1: string;
     companyName2: string;
@@ -171,6 +172,7 @@ const en: Dict = {
       "If you've been burned by consultants who handed over a slide deck and disappeared, we're the opposite of that.",
     ],
     techStackLabel: "Tech we use",
+    techStack: ["LLM / Agent Frameworks", "Python", "TypeScript", "Next.js", "React", "Node.js", "Docker", "CI/CD Pipelines", "Cloud Infrastructure", "RAG Systems", "Multi-Agent Orchestration"],
     companyLabel: "Company",
     companyName1: "Beijing Mirrorsverse Technology Co., Ltd.",
     companyName2: "北京镜界纪元科技有限公司",
@@ -284,6 +286,7 @@ const zh: Dict = {
       "如果你被那种『递一份 PPT 就消失』的顾问伤过，我们是它的反面。",
     ],
     techStackLabel: "我们用的工具",
+    techStack: ["LLM / Agent 框架", "Python", "TypeScript", "Next.js", "React", "Node.js", "Docker", "CI/CD 管道", "云基础设施", "RAG 系统", "多 Agent 编排"],
     companyLabel: "公司主体",
     companyName1: "北京镜界纪元科技有限公司",
     companyName2: "Beijing Mirrorsverse Technology Co., Ltd.",
