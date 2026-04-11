@@ -248,7 +248,7 @@ const zh: Dict = {
     tagline: "Models in production, not slides",
     company: "北京镜界纪元科技有限公司",
     intro:
-      "我们把模型接进生产环境——交付能持续运行的系统，不是一次性 demo。出了问题，写代码的人负责到底。",
+      "我们把智能体接进生产环境，交付能持续运行的系统。从第一行代码到上线运维，同一批人负责到底。",
     ctaPrimary: "聊聊你的项目",
     ctaSecondary: "了解服务内容",
   },
