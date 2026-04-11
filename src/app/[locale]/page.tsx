@@ -99,7 +99,7 @@ export default async function LocaleHome({
           </ScrollReveal>
 
           <ScrollReveal stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="reveal group rounded-xl border border-border bg-card/40 p-8 card-glow sm:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col justify-between">
+            <div className="reveal group rounded-xl border border-border border-l-2 border-l-[var(--accent-warm)] bg-card/40 p-8 card-glow sm:col-span-2 lg:col-span-2 lg:row-span-2 flex flex-col justify-between">
               <div>
                 <h3 className="mb-3 text-2xl font-bold">{t.services.featured.title}</h3>
                 <p className="max-w-lg text-base leading-relaxed text-muted-foreground">
@@ -124,7 +124,7 @@ export default async function LocaleHome({
       </section>
 
       {/* Metrics */}
-      <section className="border-t border-border px-6 py-16">
+      <section className="border-t border-border px-6 py-16 surface-alt">
         <ScrollReveal className="mx-auto max-w-6xl">
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {t.metrics.map((m) => (
@@ -160,7 +160,7 @@ export default async function LocaleHome({
                   ))}
                 </div>
                 <p className="border-t border-border/60 pt-3 text-xs text-foreground/70">
-                  <span className="font-mono text-primary/60">→</span> {item.result}
+                  <span className="font-mono text-warm-muted">→</span> {item.result}
                 </p>
               </div>
             ))}
@@ -219,7 +219,7 @@ export default async function LocaleHome({
       </section>
 
       {/* How We Work */}
-      <section className="border-t border-border px-6 py-28">
+      <section className="border-t border-border px-6 py-28 surface-alt">
         <div className="mx-auto max-w-6xl">
           <ScrollReveal className="mb-16 max-w-2xl">
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary/70">
@@ -233,7 +233,7 @@ export default async function LocaleHome({
           <ScrollReveal stagger className="mb-16 grid gap-6 sm:grid-cols-3">
             {t.howWeWork.steps.map((step) => (
               <div key={step.num} className="reveal rounded-xl border border-border bg-card/40 p-6 card-glow">
-                <p className="mb-3 font-mono text-sm text-accent-gradient">{step.num}</p>
+                <p className="mb-3 font-mono text-sm text-warm">{step.num}</p>
                 <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
               </div>
@@ -249,7 +249,7 @@ export default async function LocaleHome({
                 <div key={size.name} className="rounded-xl border border-border bg-card/30 p-5">
                   <div className="mb-2 flex items-baseline justify-between">
                     <h4 className="text-base font-semibold">{size.name}</h4>
-                    <span className="font-mono text-xs text-primary/70">{size.range}</span>
+                    <span className="font-mono text-xs text-warm-muted">{size.range}</span>
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">{size.desc}</p>
                 </div>
@@ -312,7 +312,7 @@ export default async function LocaleHome({
 function Metric({ value, label, source }: { value: string; label: string; source: string }) {
   return (
     <div className="text-center">
-      <p className="text-3xl font-bold tracking-tight text-accent-gradient sm:text-4xl font-mono">
+      <p className="text-3xl font-bold tracking-tight text-warm sm:text-4xl font-mono">
         {value}
       </p>
       <p className="mt-1 text-sm text-muted-foreground">{label}</p>

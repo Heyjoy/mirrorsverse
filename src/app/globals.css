@@ -120,6 +120,9 @@
   --glow: oklch(0.65 0.15 270);
   --glow-muted: oklch(0.5 0.1 270);
   --surface-elevated: oklch(0.18 0.02 270);
+  --accent-warm: oklch(0.78 0.12 75);
+  --accent-warm-muted: oklch(0.65 0.08 75);
+  --surface-alt: oklch(0.12 0.015 270);
 }
 
 @layer base {
@@ -144,9 +147,9 @@
   color: var(--primary);
 }
 
-/* Hero accent — same flat color, slightly brighter */
+/* Hero accent — warm to stand out from cool primary */
 .text-gradient-animated {
-  color: var(--primary);
+  color: var(--accent-warm);
 }
 
 /* Card hover — subtle border shift, no glow */
@@ -156,6 +159,16 @@
 .card-glow:hover {
   border-color: var(--primary);
 }
+
+/* Alternating section tone */
+.surface-alt {
+  background-color: var(--surface-alt);
+}
+
+/* Warm accent utilities */
+.text-warm { color: var(--accent-warm); }
+.text-warm-muted { color: var(--accent-warm-muted); }
+.border-warm { border-color: var(--accent-warm); }
 
 /* Staggered fade-in-up */
 .animate-fade-up {
