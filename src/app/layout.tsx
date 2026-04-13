@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "镜界纪元 | Mirrorsverse - AI 技术服务",
-  description: "北京镜界纪元科技有限公司 — AI Agent 开发与技术服务",
+  title: "镜界纪元 | Mirrorsverse — 做出来的，不是讲出来的",
+  description: "北京镜界纪元科技有限公司 — 智能体工程，从编码到上线运维全程负责",
   metadataBase: new URL("https://mirrorsverse.com"),
   openGraph: {
-    title: "Mirrorsverse - AI Technology Services",
-    description: "Building Intelligent Systems That Work. AI Agent development, system integration, and technical services.",
+    title: "镜界纪元 Mirrorsverse — 做出来的，不是讲出来的",
+    description: "智能体落地到真实业务。从编码到上线运维，同一批人负责到底。",
     siteName: "Mirrorsverse",
     locale: "zh_CN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mirrorsverse - AI Technology Services",
-    description: "Building Intelligent Systems That Work.",
+    title: "镜界纪元 Mirrorsverse",
+    description: "智能体工程，做出来的不是讲出来的。",
   },
 };
 
